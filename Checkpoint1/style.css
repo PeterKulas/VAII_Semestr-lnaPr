@@ -4,48 +4,38 @@
   box-sizing: border-box;
 }
 
+/*********** Navbar Styles **********/
 .navbar-container {
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-end;
   align-items: center;
-  background-color: #eeeeee;
-  border-radius: 15px;
+  background-color: white;
+  font-size: 10px;
 }
 
 .web-logo {
   border-radius: 15px;
-  width: 150px;
+  width: 100px;
   margin-left: 40px;
 }
-
-/* .navbar-container span {
-  font-size: 18px;
-  font-family: Georgia, "Times New Roman", Times, serif;
-  color: rgb(78, 248, 86);
-  margin-left: 25px;
-} */
 
 .navbar-list {
   display: flex;
   justify-content: flex-end;
   list-style-type: none;
-  padding: 10px;
-  gap: 20px;
+  padding: 8px;
+  gap: 15px;
   margin-right: 10%;
 }
 
 .navbar-list li {
-  font-size: 18px;
-  margin: 10px;
-}
-
-main {
-  display: flex;
-  padding: 30px;
+  font-size: 14px;
+  margin-right: 10px;
 }
 
 /*********** Kontakt Styles **********/
-.contact-body {
+
+.contact-container {
   display: flex;
   position: relative;
   justify-content: center;
