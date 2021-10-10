@@ -6,29 +6,45 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
     <title>Document</title>
 </head>
 
 <body class="contact-body">
-    <div class="contact-container">
-        <h2 class="contact-header">Ozvi sa nám !</h2>
-        <div class="contact-form-container">
-            <ul class="contact-list">
-                <li><span class="title">Email: </span> <span>contact@gmail.com</span></li>
-                <li><span class="title">Mobil: </span><span>+421 944 786 122</span></li>
-                <li><span class="title">Adresa: </span><span>Oščadnica 668, 02301 Oščadnica</span></li>
-            </ul>
-            <form name="contact-form">
-                <label for="fname">Name: </label><br>
-                <input type="text" id="fname" name="fname"><br>
-                <label for="fmail">E-mail: </label><br>
-                <input type="text" id="fmail" name="fmail"><br>
-                <label for="fTextArea">Text správy: </label><br>
-                <textarea rows="8" cols="20" name="fTextArea" form="contact-form"></textarea>
-                <button type="submit">Odošli</button>
+    <div class="contact-form-container">
+        <div class="white-space"></div>
+        <div class="contact-form">
+            <span>Napíš nám mail</span>
+            <form name="form">
+                <input type="text" id="fname" name="fname" placeholder="Meno"><br>
+                <input type="text" id="fmail" name="fmail" placeholder="E-mail"><br>
+                <textarea rows="8" cols="20" name="fTextArea" form="contact-form" placeholder='Správa...'></textarea>
+                <button type="submit" class="contact-btn">Odoslať</button>
             </form>
         </div>
+    </div>
 
+    <div class="contact-info">
+        <h4>Kontaktuj nás</h4>
+        <ul>
+            <li><i class="fa fa-location-arrow"></i>
+                <span>Oščadnica 188, 02301</span>
+            </li>
+            <li><i class="fa fa-envelope"></i>
+                <span>kontakt@gmail.com</span>
+            </li>
+            <li><i class="fa fa-phone-square"></i>
+                <span>(+421) 944 889 445</span>
+                <p>Podpora: 8:00-18:00</p>
+            </li>
+
+        </ul>
+        <div class="ci-footer">
+            <i class="fa fa-instagram"></i>
+            <i class="fa fa-twitter-square"></i>
+            <i class="fa fa-linkedin"></i>
+            <i class="fa fa-github-square"></i>
+        </div>
     </div>
 </body>
 
