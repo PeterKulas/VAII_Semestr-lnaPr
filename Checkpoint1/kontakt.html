@@ -5,11 +5,31 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
     <title>Document</title>
 </head>
 
-<body>
+<body class="contact-body">
+    <div class="contact-container">
+        <h2 class="contact-header">Ozvi sa nám !</h2>
+        <div class="contact-form-container">
+            <ul class="contact-list">
+                <li><span class="title">Email: </span> <span>contact@gmail.com</span></li>
+                <li><span class="title">Mobil: </span><span>+421 944 786 122</span></li>
+                <li><span class="title">Adresa: </span><span>Oščadnica 668, 02301 Oščadnica</span></li>
+            </ul>
+            <form name="contact-form">
+                <label for="fname">Name: </label><br>
+                <input type="text" id="fname" name="fname"><br>
+                <label for="fmail">E-mail: </label><br>
+                <input type="text" id="fmail" name="fmail"><br>
+                <label for="fTextArea">Text správy: </label><br>
+                <textarea rows="8" cols="20" name="fTextArea" form="contact-form"></textarea>
+                <button type="submit">Odošli</button>
+            </form>
+        </div>
 
+    </div>
 </body>
 
 </html>
