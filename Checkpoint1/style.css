@@ -138,7 +138,7 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-color: rgba(255, 255, 255, 0.932);
+  justify-content: center;
   background-color: #54a1d4;
   height: 95%;
 }
@@ -146,6 +146,8 @@ body {
 .about-context {
   width: 400px;
   padding: 15px;
+  background-color: rgba(255, 255, 255, 0.932);
+  border-radius: 14px;
 }
 
 .about-container h2 {
