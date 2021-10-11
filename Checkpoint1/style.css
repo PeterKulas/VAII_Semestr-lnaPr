@@ -4,13 +4,21 @@
   box-sizing: border-box;
 }
 
+body {
+  height: 100vh;
+}
+
 /*********** Navbar Styles **********/
 .navbar-container {
   display: flex;
-  justify-content: flex-end;
+  justify-content: space-around;
   align-items: center;
-  background-color: white;
+  background-color: rgba(255, 255, 255, 0.932);
   font-size: 10px;
+  height: 5%;
+}
+.navbar-container span {
+  font-family: cursive;
 }
 
 .web-logo {
@@ -40,7 +48,7 @@
   position: relative;
   justify-content: center;
   align-items: center;
-  height: 100vh;
+  height: 95%;
   background-color: #54a1d4;
 }
 
@@ -123,4 +131,35 @@
 .ci-footer {
   display: flex;
   gap: 10px;
+}
+
+/*********** About Styles **********/
+.about-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: rgba(255, 255, 255, 0.932);
+  background-color: #54a1d4;
+  height: 95%;
+}
+
+.about-context {
+  width: 400px;
+  padding: 15px;
+}
+
+.about-container h2 {
+  text-decoration: underline;
+  font-family: "Gill Sans", "Gill Sans MT", "Calibri", "Trebuchet MS",
+    sans-serif;
+  color: rgb(12, 12, 112);
+}
+
+.about-container p {
+  font-size: 12px;
+  margin-bottom: 10px;
+}
+
+.about-img-container {
+  display: flex;
 }
