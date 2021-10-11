@@ -4,6 +4,10 @@
   box-sizing: border-box;
 }
 
+html {
+  font-size: 100%;
+}
+
 body {
   height: 100vh;
 }
@@ -14,30 +18,25 @@ body {
   justify-content: space-around;
   align-items: center;
   background-color: rgba(255, 255, 255, 0.932);
-  font-size: 10px;
+  font-size: 20px;
   height: 5%;
 }
+
 .navbar-container span {
   font-family: cursive;
-}
-
-.web-logo {
-  border-radius: 15px;
-  width: 100px;
-  margin-left: 40px;
 }
 
 .navbar-list {
   display: flex;
   justify-content: flex-end;
+  align-items: center;
   list-style-type: none;
-  padding: 8px;
+  padding: 16px;
   gap: 15px;
-  margin-right: 10%;
 }
 
 .navbar-list li {
-  font-size: 14px;
+  font-size: 28px;
   margin-right: 10px;
 }
 
@@ -49,14 +48,15 @@ body {
   justify-content: center;
   align-items: center;
   height: 95%;
+  width: auto;
   background-color: #54a1d4;
 }
 
 .contact-form-container {
   position: absolute;
   display: flex;
-  width: 20rem;
-  height: 18rem;
+  width: 40rem;
+  height: 36rem;
   background-color: rgba(255, 255, 255, 0.932);
   border-radius: 20px;
   box-shadow: 0px 0px 13px 1px rgba(0, 0, 0, 0.38);
@@ -64,31 +64,38 @@ body {
 
 .contact-form {
   font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
-  margin-top: 32px;
   flex-direction: column;
+  width: 17.5rem;
+  margin-right: 80px;
+  margin-top: 64px;
 }
 
 .contact-form span {
   color: rgb(12, 12, 112);
+  font-size: 2rem;
+  font-weight: bold;
 }
 
 .contact-form input,
 .contact-form textarea {
-  font-size: 10px;
+  font-size: 1.3rem; /*20px*/
   color: #aaa9a9;
   background-color: rgba(255, 255, 255, 0.932);
   border: none;
-  padding: 6px;
-  margin: 4px;
+  padding: 16px;
+  margin: 8px;
+  width: 100%;
 }
 
 .contact-btn {
-  width: 78%;
+  width: 100%;
   background-color: #54a1d4;
   color: white;
   border: none;
   border-radius: 6px;
+  font-size: 24px;
 }
+
 .contact-btn:hover,
 .contact-btn:active {
   cursor: pointer;
@@ -99,18 +106,29 @@ body {
   width: 50%;
 }
 
+/*StackOverFlow @media*/
+@media only screen and (max-width: 800px) {
+  .contact-info,
+  .white-space {
+    display: none;
+  }
+  .contact-form-container {
+    width: fit-content;
+  }
+}
+
 .contact-info {
   position: absolute;
   z-index: 9;
-  width: 10rem;
-  height: 15rem;
+  width: 20rem;
+  height: 30rem;
   background-color: rgb(12, 12, 112);
   box-shadow: 0px 0px 13px 1px rgba(0, 0, 0, 0.5);
   padding: 16px;
   color: #afdddf91;
-  font-size: 12px;
+  font-size: 24px;
   border-radius: 20px;
-  margin-left: -22rem;
+  margin-left: -30%;
 }
 
 .contact-info h4 {
@@ -121,16 +139,16 @@ body {
 
 .contact-info ul {
   list-style: none;
-  margin-bottom: 80px;
+  margin-bottom: 160px;
 }
 
 .contact-info li {
-  margin-bottom: 12px;
+  margin-bottom: 24px;
 }
 
 .ci-footer {
   display: flex;
-  gap: 10px;
+  gap: 20px;
 }
 
 /*********** About Styles **********/
@@ -144,10 +162,12 @@ body {
 }
 
 .about-context {
-  width: 400px;
-  padding: 15px;
+  width: 50vw; /*800px*/
+  height: max-content;
+  padding: 3rem;
   background-color: rgba(255, 255, 255, 0.932);
   border-radius: 14px;
+  box-shadow: 0px 0px 13px 1px rgba(0, 0, 0, 0.5);
 }
 
 .about-container h2 {
@@ -158,7 +178,7 @@ body {
 }
 
 .about-container p {
-  font-size: 12px;
+  font-size: 28px;
   margin-bottom: 10px;
 }
 
