@@ -57,7 +57,8 @@ body {
 /*********** Index Styles **********/
 section {
   display: flex;
-  background-color: #2e8bc0;
+  background-color: #b1d4e0;
+  align-items: stretch;
 }
 
 nav {
@@ -71,12 +72,16 @@ nav span {
   margin-bottom: 10px;
 }
 
-.index-zoznamSluzieb {
-  list-style-type: none;
-}
 .index-zoznamSluzieb li {
   display: list-item;
   white-space: nowrap; /*StackOverFlow*/
+}
+
+.index-zoznamSluzieb li:active,
+.index-zoznamSluzieb li:hover {
+  cursor: pointer;
+  font-weight: bold;
+  text-decoration: underline;
 }
 
 .index-article {
@@ -90,6 +95,18 @@ nav span {
 .index-welcome h1 {
   font-size: 160%;
   font-family: cursive;
+}
+
+section img {
+  padding: 20px;
+  border-radius: 70px;
+}
+
+.index-footer {
+  background-color: #0c2d48;
+  color: white;
+  font-weight: bold;
+  padding: 5px;
 }
 
 @media (max-width: 600px) {
