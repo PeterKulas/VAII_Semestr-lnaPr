@@ -13,11 +13,31 @@ body {
 }
 
 /*********** Navbar Styles **********/
-.navbar-container {
+.navbar {
+  color: white;
+  background-color: #0c2d48;
+}
+
+.navbar li {
+  text-decoration: none;
+  margin-right: 15px;
+  color: white;
+}
+
+.navbar li:hover,
+.navbar li:active {
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.navbar span {
+  font-family: cursive, Verdana, Geneva, Tahoma, sans-serif;
+}
+
+/* .navbar-container {
   display: flex;
   justify-content: space-around;
   align-items: center;
-  /* background-color: rgba(255, 255, 255, 0.932); */
   background-color: #0c2d48;
   color: white;
   font-size: 20px;
@@ -53,7 +73,7 @@ body {
   .boxes {
     flex-direction: column;
   }
-}
+} */
 
 /*********** Index Styles **********/
 section {
