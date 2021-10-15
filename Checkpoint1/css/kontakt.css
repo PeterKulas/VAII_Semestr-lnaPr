@@ -1,0 +1,69 @@
+.contact-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: rgb(12, 12, 112);
+  box-shadow: 0px 0px 13px 1px rgba(0, 0, 0, 0.5);
+  border-radius: 1rem;
+  color: white;
+}
+
+.contact-info ul {
+  list-style-type: none;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+}
+.contact-info h4 {
+  margin-bottom: 1.8rem;
+  font-weight: bold;
+}
+.contact-info li {
+  margin-bottom: 1.5rem;
+  font-size: 100%;
+}
+
+.ci-footer {
+  display: flex;
+  justify-content: space-around;
+  font-size: 3vh;
+}
+
+.ci-footer i {
+  cursor: pointer;
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  /* background-color: white; */
+  border-radius: 2vw;
+}
+
+.contact-form span {
+  color: black;
+  font-size: 150%;
+  font-weight: bold;
+}
+
+.contact-form input,
+.contact-form textarea {
+  font-size: 100%;
+  color: #aaa9a9;
+  border: none;
+  margin: 1px;
+}
+
+.contact-btn {
+  width: 10vw;
+  background-color: #54a1d4;
+  color: white;
+  border: none;
+  border-radius: 1rem;
+  font-size: 150%;
+}
+
+.contact-btn:hover,
+.contact-btn:active {
+  cursor: pointer;
+  background-color: rgb(12, 12, 112);
+}
