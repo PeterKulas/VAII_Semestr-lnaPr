@@ -16,8 +16,22 @@ body {
 }
 
 /**********Navbar styles**********/
-.index-nav {
+
+.navbar {
   margin-bottom: 30px;
+}
+
+.navbar a {
+  color: white;
+  text-decoration: none;
+}
+
+.navbar a:active,
+.navbar a:focus,
+.navbar a:hover {
+  color: white;
+  cursor: pointer;
+  font-weight: bold;
 }
 
 .bi {
@@ -37,7 +51,6 @@ body {
 
 .nav-item,
 .navbar-brand {
-  color: white;
   font-size: large;
 }
 
@@ -55,19 +68,13 @@ body {
   margin-right: 10px;
 }
 
-.nav-item:active,
-.nav-item:hover {
-  cursor: pointer;
-  font-weight: bold;
-}
-
 .navbar,
 .footer {
-  color: white;
   background-color: #0c2d48;
   padding: 10px;
 }
 
 .footer {
+  color: white;
   font-size: 1.1rem;
 }
