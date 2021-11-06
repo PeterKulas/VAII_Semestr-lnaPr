@@ -19,27 +19,7 @@
 
 <body>
     <div class="container-fluid g-0 min-vh-100 ">
-        <div class="row index-nav g-0">
-            <div class=" col-sm-12 g-0">
-                <nav class="navbar navbar-expand-lg g-0">
-                    <div class="container-fluid g-0">
-                        <div class="navbar-brand">BookRent</div>
-                        <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                            data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false"
-                            aria-label="Toggle navigation">
-                            <i class="bi bi-justify"></i>
-                        </button>
-                        <div class="collapse navbar-collapse" id="navbarNav">
-                            <ul class="navbar-nav">
-                                <li class="nav-item"><a href="index.html">Domov</a></li>
-                                <li class="nav-item"><a href="about.html">O nás</a></li>
-                                <li class="nav-item"><a href="kontakt.html">Kontakt</a></li>
-                            </ul>
-                        </div>
-                    </div>
-                </nav>
-            </div>
-        </div>
+    <?php include("components/navbar.html"); ?>
         <div class="row g-0">
             <div class="col-sm-12 nadpis g-0">
                 <h1>Vitajte na stránke BookRentu</h1>
@@ -103,15 +83,11 @@
             <div class="col-md-4 image g-0 justify-content-center">
                 <img class="image g-0" src="../images/book.png" alt="book">
             </div>
-
-        </div>
-
-        <div class="row footer fixed-bottom justify-content-center">
-            <div class="col-sm-12 ">
-                © 2021 Peter Kulas
-            </div>
-        </div>
+     </div>
+        <?php include("components/footer.html"); ?>
     </div>
+    <?php include("components/modalRegister.html"); ?>
+    <?php include("components/modalLogin.html"); ?>
 </body>
 
 </html>

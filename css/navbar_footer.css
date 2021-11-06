@@ -79,3 +79,19 @@ body {
   color: white;
   font-size: 1.1rem;
 }
+
+.login {
+  display: flex;
+  flex-direction: column;
+}
+
+.login span {
+  font-size: small;
+  color: white;
+}
+
+.login span:active,
+.login span:hover {
+  text-decoration: underline;
+  cursor: pointer;
+}
