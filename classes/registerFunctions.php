@@ -4,7 +4,7 @@ class RegisterFunctions extends Database {
     
     protected function insertUser($firstname, $lastname, $password, $email, $date) {
         
-        if($this->checkEmail($email)) {
+        if($this->checkEmail($email) === false) {
             try {
                 $sql = "INSERT INTO `users`(`firstname`,`lastname`, `password`, `email`, `registrationDate`) VALUES ('$firstname','$lastname', '$password', '$email', '$date')";
                 $this->connect()->exec($sql);
@@ -22,9 +22,9 @@ class RegisterFunctions extends Database {
             $sql->execute([$email]); 
 
             if($sql->rowCount() > 0) {
-                return false;
-            } else {
                 return true;
+            } else {
+                return false;
             }
             
          } catch(PDOException $e) {

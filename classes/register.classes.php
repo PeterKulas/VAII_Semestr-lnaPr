@@ -19,21 +19,29 @@ class RegisterClass extends RegisterFunctions {
 
     public function registerUser() {
         if($this->emptyInput() == true) {
-            header("location: ../registrationPage/php?error=emptyInput");
+            header("location: ../registrationPage.php?error=emptyInput");
             exit();
         }
         if($this->samePasswords() == true) {
             header("location: ../registrationPage.php?error=samePasswords");
             exit();
         }
+        if($this->invalidPassword() == true) {
+            header("location: ../registrationPage.php?error=invalidPassword");
+            exit();
+        }
+        if($this->shortPassword() == true) {
+            header("location: ../registrationPage.php?error=shortPassword");
+            exit();
+        }
         if($this->invalidEmail() == true) {
-            header("location: ../registrationPage/php?error=invalidEmail");
+            header("location: ../registrationPage.php?error=invalidEmail");
             exit();
         }
         if($this->emailExist() == true) {
-            header("location: ../registrationPage/php?error=emailExist");
+           header("location: ../registrationPage.php?error=emailExist");
             exit();
-        }
+        }     
 
         $date = date('Y/m/d H:i:s');
         $this->insertUser($this->firstname, $this->lastname, $this->password, $this->email, $date);
@@ -57,6 +65,22 @@ class RegisterClass extends RegisterFunctions {
         return $result;
     }
 
+    private function shortPassword() {
+        $result = false;
+        if(strlen($this->password) < 8) {
+            $result = true;
+        }
+        return $result;
+    }
+
+    private function invalidPassword() {
+        $result = true;
+        if(preg_match('~[A-Z]~', $this->password) && preg_match('~[a-z]~', $this->password) && preg_match('~[0-9]~', $this->password)) {
+            $result = false;
+        }
+        return $result;
+    }
+
     private function invalidEmail() {
         $result = false;
         if(!filter_var($this->email, FILTER_VALIDATE_EMAIL)) {
@@ -66,10 +90,12 @@ class RegisterClass extends RegisterFunctions {
     }
     
     private function emailExist() {
-        $result = true;
+        $result = false;
         if($this->checkEmail($this->email)) {
-            $result = false;
+            $result = true;
         }
         return $result;
     }
+
+    
 }

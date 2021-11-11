@@ -24,19 +24,38 @@
         <?php 
         if (isset($_GET['error'])) {
             $error = $_GET['error'];
-            if($error === "samePasswords") {?>
+            if ($error !== "none") {
+            ?>
         <div class="row justify-content-center g-0">
             <div class="col-md-3 g-0">
                 <div class="alert alert-danger" role="alert">
-                    Zadaj rovnaké heslá!
+                    <?php  switch ($error) {
+            case "emptyInput":
+                echo "Vyplň všetky polia!";
+                break;
+            case "samePasswords":
+                echo "Hesla sa nezhodujú!";
+                break;
+            case "shortPassword":
+                echo "Heslo musí obsahovať minimálne 8 znakov!";
+                break;   
+            case "invalidPassword":
+                echo "Heslo musí obsahovať miimálne 1 číslicu, 1 malé a 1 veľke písmeno!";
+                break; //TODO
+            case "invalidEmail":
+                echo "Naplatný formát emailovej adresy!";
+                break;
+            case "emailExist":
+                echo "Už existuje účet s touto emailovou adresou!";
+                break;   
+        }?>
                 </div>
             </div>
         </div>
-        <?php }?>
-
         <?php 
-                $error = $_GET['error'];
-                if($error === "none" ) {?>
+    }?>
+        <?php 
+        if($error === "none" ) {?>
         <div class="row justify-content-center g-0">
             <div class="col-md-3 g-0">
                 <div class="alert alert-success" role="alert">
@@ -104,7 +123,7 @@
                                 name="email">
                         </div>
                         <div class="d-grid col-12 mx-auto">
-                            <button class="btn btn-primary" type="submit" name="submit"><span></span>
+                            <button class="btn btn-primary" type="submit" name="submit">
                                 Registrovať</button>
                         </div>
                     </form>

@@ -18,7 +18,6 @@
 
 </head>
 
-
 <body>
     <div class="container-fluid g-0">
         <?php include("components/navbar.html"); ?>
