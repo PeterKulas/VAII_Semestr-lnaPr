@@ -6,6 +6,7 @@ class RegisterFunctions extends Database {
         
         if($this->checkEmail($email) === false) {
             try {
+                $password = password_hash($password, PASSWORD_BCRYPT);
                 $sql = "INSERT INTO `users`(`firstname`,`lastname`, `password`, `email`, `registrationDate`) VALUES ('$firstname','$lastname', '$password', '$email', '$date')";
                 $this->connect()->exec($sql);
              } catch(PDOException $e) {
