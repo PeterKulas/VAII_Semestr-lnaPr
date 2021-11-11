@@ -19,19 +19,19 @@ class RegisterClass extends RegisterFunctions {
 
     public function registerUser() {
         if($this->emptyInput() == true) {
-            header("location: ../index/php?error=username");
+            header("location: ../registrationPage/php?error=emptyInput");
             exit();
         }
         if($this->samePasswords() == true) {
-            header("location: ../index/php?error=samepasswords");
+            header("location: ../registrationPage.php?error=samePasswords");
             exit();
         }
         if($this->invalidEmail() == true) {
-            header("location: ../index/php?error=invalidemail");
+            header("location: ../registrationPage/php?error=invalidEmail");
             exit();
         }
         if($this->emailExist() == true) {
-            header("location: ../index/php?error=emailexist");
+            header("location: ../registrationPage/php?error=emailExist");
             exit();
         }
 

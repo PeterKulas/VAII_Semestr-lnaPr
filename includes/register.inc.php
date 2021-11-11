@@ -15,5 +15,5 @@ if (isset($_POST["submit"])) {
     
     $register->registerUser();
 
-    header("location: ../index.php?error=none");
+    header("location: ../registrationPage.php?error=none");
 }

@@ -53,7 +53,6 @@
 
         <?php include("components/footer.html"); ?>
     </div>
-    <?php include("components/modalRegister.html");?>
     <?php include("components/modalLogin.html"); ?>
 
 </body>
