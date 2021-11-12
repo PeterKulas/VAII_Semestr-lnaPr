@@ -1,0 +1,34 @@
+.maincontent {
+  padding-top: 50px;
+  padding-left: 20%;
+}
+
+.sidebar {
+  background-color: #145da0;
+  position: fixed;
+  top: 0;
+  left: 0;
+  min-height: 100vh;
+  z-index: 1;
+}
+
+.sidebar h4 {
+  color: white;
+  font-weight: bold;
+  margin-top: 40px;
+  text-align: center;
+}
+
+a {
+  color: rgba(253, 250, 250, 0.959);
+}
+@media screen and (max-width: 767px) {
+  .sidenav {
+    height: auto;
+    padding: 15px;
+  }
+
+  .row.content {
+    height: auto;
+  }
+}

@@ -7,3 +7,4 @@ CREATE TABLE `users` (
     `registrationDate` datetime NOT NULL,
     PRIMARY KEY (`id`)
  ) AUTO_INCREMENT = 1;
+

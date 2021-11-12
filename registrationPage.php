@@ -40,8 +40,8 @@
                 echo "Heslo musí obsahovať minimálne 8 znakov!";
                 break;   
             case "invalidPassword":
-                echo "Heslo musí obsahovať miimálne 1 číslicu, 1 malé a 1 veľke písmeno!";
-                break; //TODO
+                echo "Heslo musí obsahovať minimálne 1 číslicu, 1 malé a 1 veľke písmeno!";
+                break;
             case "invalidEmail":
                 echo "Naplatný formát emailovej adresy!";
                 break;
