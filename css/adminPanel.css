@@ -22,6 +22,7 @@
 a {
   color: rgba(253, 250, 250, 0.959);
 }
+
 @media screen and (max-width: 767px) {
   .sidenav {
     height: auto;

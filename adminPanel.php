@@ -13,6 +13,7 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
 
     <link rel="stylesheet" href="css/adminPanel.css">
 
@@ -52,8 +53,11 @@
                             <th scope="row"><?php echo $user["id"] ?></th>
                             <td><?php echo  $user['firstname'] ?></td>
                             <td><?php echo  $user['lastname']  ?></td>
-                            <td><?php echo  $user['password']  ?></td>
                             <td><?php echo  $user['email']  ?></td>
+                            <td>
+                                <?php $tempPass = substr($user['password'],0,10)." ..."; 
+                                echo  $tempPass  ?>
+                            </td>
                             <td><?php echo  $user['registrationDate']  ?></td>
                         </tr>
                         <?php } ?>
@@ -62,6 +66,7 @@
             </div>
         </div>
     </div>
+    <script src="js/adminPanel.js"></script>
 </body>
 
 </html>
