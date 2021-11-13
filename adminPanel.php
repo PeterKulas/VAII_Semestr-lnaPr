@@ -24,6 +24,11 @@
     <div class="container-fluid">
         <div class="row content">
             <div class="col-sm-2 sidebar">
+                <div class="theme-box">
+                    <button class="theme-btn thm-1 active">1</button>
+                    <button class="theme-btn thm-2">2</button>
+                    <button class="theme-btn thm-3">3</button>
+                </div>
                 <h4>Admin panel</h4>
                 <hr>
                 <ul class="nav nav-pills nav-stacked">
@@ -39,6 +44,7 @@
                 <table class="table table-striped">
                     <thead>
                         <tr>
+                            <th scope="col"><i class="bi bi-pencil-fill"></i></th>
                             <th scope="col">#</th>
                             <th scope="col">Meno</th>
                             <th scope="col">Priezvisko</th>
@@ -50,12 +56,13 @@
                     <tbody>
                         <?php foreach ($userStorage->getAllUsers() as $user) { ?>
                         <tr>
+                            <td><input type="checkbox"></td>
                             <th scope="row"><?php echo $user["id"] ?></th>
                             <td><?php echo  $user['firstname'] ?></td>
                             <td><?php echo  $user['lastname']  ?></td>
                             <td><?php echo  $user['email']  ?></td>
                             <td>
-                                <?php $tempPass = substr($user['password'],0,10)." ..."; 
+                                <?php $tempPass = substr($user['password'],0,15)." ..."; 
                                 echo  $tempPass  ?>
                             </td>
                             <td><?php echo  $user['registrationDate']  ?></td>
