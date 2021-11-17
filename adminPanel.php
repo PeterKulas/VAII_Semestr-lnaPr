@@ -7,7 +7,7 @@
 <html lang="en">
 
 <head>
-    <title>Bootstrap Example</title>
+    <title>Admin panel</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
@@ -20,7 +20,13 @@
 </head>
 
 <body>
-
+    <?php 
+    if (isset($_GET['id'])) {
+        $deletedID = $_GET['id'];
+        $userStorage->deleteUser($deletedID); 
+    }
+                             
+    ?>
     <div class="container-fluid">
         <div class="row content">
             <div class="col-sm-2 sidebar">
@@ -51,12 +57,13 @@
                             <th scope="col">Email</th>
                             <th scope="col">Heslo</th>
                             <th scope="col">Dátum registrácie</th>
+                            <th scope="col">O</th>
                         </tr>
                     </thead>
                     <tbody>
                         <?php foreach ($userStorage->getAllUsers() as $user) { ?>
                         <tr>
-                            <td><input type="checkbox"></td>
+                            <td><input type="radio"></td>
                             <th scope="row"><?php echo $user["id"] ?></th>
                             <td><?php echo  $user['firstname'] ?></td>
                             <td><?php echo  $user['lastname']  ?></td>
@@ -66,6 +73,9 @@
                                 echo  $tempPass  ?>
                             </td>
                             <td><?php echo  $user['registrationDate']  ?></td>
+                            <td><a class="edit" href="classes/user.classes.php?id=<?php echo $user["id"]; ?>">Edit</a>
+                                <a class="delete" href="adminPanel.php?id=<?php echo $user["id"]; ?>">Delete</a>
+                            </td>
                         </tr>
                         <?php } ?>
                     </tbody>

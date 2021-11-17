@@ -6,25 +6,26 @@
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body">
-                <form action="" method="POST">
+                <form action="../includes/login.inc.php" method="POST">
                     <div class="row mb-3">
                         <label for="email" class="col-sm-2 col-form-label">Email:</label>
                         <div class="col-sm-10">
-                            <input type="text" class="form-control" id="email">
+                            <input type="text" required name="email" class="form-control" id="email">
                         </div>
                     </div>
                     <div class="row mb-3">
-                        <label for="inputPasswordL" class="col-sm-2 col-form-label">Heslo:</label>
+                        <label for="inputPassword" class="col-sm-2 col-form-label">Heslo:</label>
                         <div class="col-sm-10">
-                            <input type="password" class="form-control" id="inputPasswordL">
+                            <input type="password" required name="password" class="form-control" id="inputPassword">
                         </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Zavriet</button>
+                        <button type="submit" name="submit" class="btn btn-primary">Prihlásiť</button>
                     </div>
                 </form>
             </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Zavriet</button>
-                <button type="submit" name="submit" class="btn btn-primary">Prihlásiť</button>
-            </div>
+
         </div>
     </div>
 </div>

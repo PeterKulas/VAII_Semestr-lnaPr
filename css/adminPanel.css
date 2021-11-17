@@ -23,6 +23,14 @@ a {
   color: rgba(253, 250, 250, 0.959);
 }
 
+.edit {
+  color: green;
+}
+
+.delete {
+  color: red;
+}
+
 .theme-box {
   display: flex;
   font-weight: bold;

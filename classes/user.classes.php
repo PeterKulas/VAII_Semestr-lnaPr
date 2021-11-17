@@ -10,4 +10,12 @@ class UserStorage extends Database {
         $usersArray = $statement->fetchAll(PDO::FETCH_ASSOC);
         return $usersArray;
     }
+
+    public function deleteUser($id) {
+        
+        $sql = "DELETE FROM users WHERE id=$id";
+        $this->connect()->exec($sql);
+        echo "Record deleted successfully";
+
+    }
 }
