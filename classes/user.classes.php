@@ -1,6 +1,10 @@
 <?php
 require_once "User.model.php";
-require_once "database.php";
+require_once "database.php"; 
+
+if (isset($_GET['Meno'])) {
+    echo "HI";
+}   
 
 class UserStorage extends Database {
 
@@ -11,11 +15,12 @@ class UserStorage extends Database {
         return $usersArray;
     }
 
-    public function deleteUser($id) {
-        
+    public function deleteUser($id) {       
         $sql = "DELETE FROM users WHERE id=$id";
         $this->connect()->exec($sql);
-        echo "Record deleted successfully";
+    }
 
+    public function updateUser() {
+        echo $_GET['Meno'];
     }
 }

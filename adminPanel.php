@@ -21,11 +21,10 @@
 
 <body>
     <?php 
-    if (isset($_GET['id'])) {
+    if (isset($_GET['action']) && $_GET['action'] == "delete") {
         $deletedID = $_GET['id'];
         $userStorage->deleteUser($deletedID); 
-    }
-                             
+    }                      
     ?>
     <div class="container-fluid">
         <div class="row content">
@@ -46,6 +45,27 @@
 
             <div class="col-sm-10 maincontent">
                 <h2>Používatelia</h2>
+
+                <?php 
+    if (isset($_GET['edit'])) { 
+        $id = $_GET['id'];
+        $firstName = $_GET['firstname'];
+        $lastName = $_GET['lastname'];
+        $email = $_GET['email'];
+        ?> <form action="classes/user.classes.php">
+                    <label for="Meno">Meno:</label>
+                    <input type="text" id="Meno" name="Meno" value="<?php echo $firstName ?>">
+                    <label for="Priezvisko">Priezvisko:</label>
+                    <input type="text" id="Priezvisko" name="Priezvisko" value="<?php echo $lastName ?>">
+                    <label for=" Email">Email:</label>
+                    <input type="email" id="Email" name="Email" value="<?php echo $email ?>">
+                    <button class=" btn btn-primary" type="submit">
+                        Editovat</button>
+                </form>
+                <?php   
+             
+            } ?>
+
                 <hr>
                 <table class="table table-striped">
                     <thead>
@@ -73,11 +93,14 @@
                                 echo  $tempPass  ?>
                             </td>
                             <td><?php echo  $user['registrationDate']  ?></td>
-                            <td><a class="edit" href="classes/user.classes.php?id=<?php echo $user["id"]; ?>">Edit</a>
-                                <a class="delete" href="adminPanel.php?id=<?php echo $user["id"]; ?>">Delete</a>
+                            <td><a class="edit"
+                                    href="adminPanel.php?edit=<?php echo "edit" ?>&id=<?php echo $user["id"]; ?>&firstname=<?php echo $user["firstname"]; ?>&lastname=<?php echo $user["lastname"]; ?>&email=<?php echo $user["email"]; ?>">Edit</a>
+                                <a class="delete"
+                                    href="adminPanel.php?delete=<?php echo "delete" ?>&id=<?php echo $user["id"]; ?>">Delete</a>
                             </td>
+
                         </tr>
-                        <?php } ?>
+                        <?php } //classes/user.classes.php?>
                     </tbody>
                 </table>
             </div>

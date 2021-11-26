@@ -7,6 +7,7 @@ const inputPasswordValue = document.getElementById("inputPass");
 inputPassword.addEventListener("input", function () {
   if (inputPasswordValue.value.length > 0) {
     paragraphPass.classList.remove("hidden");
+    strengthOfPassword.innerHTML = "slabe";
     strengthOfPassword.style.color = "red";
   }
   if (inputPasswordValue.value.length > 7) {
@@ -17,4 +18,6 @@ inputPassword.addEventListener("input", function () {
     strengthOfPassword.innerHTML = "vyborne";
     strengthOfPassword.style.color = "green";
   }
+
+  inputPasswordValue.value = " ";
 });

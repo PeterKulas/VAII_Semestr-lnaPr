@@ -104,7 +104,7 @@
                             <input id="inputPass" type="password" class="form-control password" name="password"
                                 placeholder="Heslo" required name="password">
                         </div>
-                        <p id="passValue" class="hidden">Sila hesla: <span id="spanPassValue">slaba</span> </p>
+                        <p id="passValue" class="hidden">Sila hesla: <span id="spanPassValue">Slabe</span> </p>
                         <div class="input-group mb-3">
                             <span class="input-group-text bg-primary"><svg xmlns="http://www.w3.org/2000/svg" width="16"
                                     height="16" fill="currentColor" class="bi bi-key-fill" viewBox="0 0 16 16">
