@@ -52,11 +52,13 @@
         $firstName = $_GET['firstname'];
         $lastName = $_GET['lastname'];
         $email = $_GET['email'];
-        ?> <form action="classes/user.classes.php">
-                    <label for="Meno">Meno:</label>
-                    <input type="text" id="Meno" name="Meno" value="<?php echo $firstName ?>">
-                    <label for="Priezvisko">Priezvisko:</label>
-                    <input type="text" id="Priezvisko" name="Priezvisko" value="<?php echo $lastName ?>">
+        ?> <form action="adminPanel.php">
+                    <label for="country">ID:</label>
+                    <input type="text" id="ID" name="ID" value="<?php echo $id ?>" readonly><br>
+                    <label for="Firstname">Meno:</label>
+                    <input type="text" id="Firstname" name="Firstname" value="<?php echo $firstName ?>">
+                    <label for="Lastname">Priezvisko:</label>
+                    <input type="text" id="Lastname" name="Lastname" value="<?php echo $lastName ?>">
                     <label for=" Email">Email:</label>
                     <input type="email" id="Email" name="Email" value="<?php echo $email ?>">
                     <button class=" btn btn-primary" type="submit">
