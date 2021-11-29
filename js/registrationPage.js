@@ -1,5 +1,6 @@
 const paragraphPass = document.getElementById("passValue");
 const passMsg = document.getElementById("passMsg");
+const emailMsg = document.getElementById("emailMsg");
 const strengthOfPassword = document.getElementById("spanPassValue");
 const firstnameValidation = document.getElementById("firstnameValidation");
 const lastnameValidation = document.getElementById("lastnameValidation");
@@ -8,6 +9,7 @@ const inputFirstName = document.getElementById("inputFirstname");
 const inputLastName = document.getElementById("inputLastname");
 const password = document.getElementById("inputPass");
 const repassword = document.getElementById("inputRepass");
+const inputEmail = document.getElementById("inputEmail");
 
 inputFirstName.addEventListener("input", function () {
   validateName(inputFirstName, firstnameValidation);
@@ -52,6 +54,23 @@ repassword.addEventListener("input", function () {
     repassword.style.border = "5px solid #F08080";
   }
 });
+
+inputEmail.addEventListener("input", function () {
+  if (validateEmail(inputEmail)) {
+    setInnerHtml(emailMsg, "Spravny format emailu");
+    inputEmail.style.border = "5px solid #90EE90";
+
+    setTimeout(function () {
+      setInnerHtml(emailMsg, " ");
+      inputEmail.style.border = "0px solid #90EE90";
+    }, 2000);
+  } else {
+    inputEmail.style.border = "5px solid #F08080";
+    setInnerHtml(emailMsg, "Format: text@text.text");
+  }
+});
+
+/*----------------------------------------------------------------------- */
 
 const samePasswords = function () {
   if (password.value === repassword.value) {
@@ -101,10 +120,6 @@ const validateName = function (input, validation) {
   }
 };
 
-const setInnerHtml = function (input, text) {
-  input.innerHTML = text;
-};
-
 const checkFirstBigLetter = function (input) {
   let regex = /^[A-Z]/;
   if (input.search(regex) == -1) {
@@ -121,4 +136,17 @@ const checkUnwantedChars = function (input) {
   } else {
     return false;
   }
+};
+
+const validateEmail = function (input) {
+  let regex = /\S+@\S+\.\S+/;
+  if (regex.test(input.value)) {
+    return true;
+  } else {
+    return false;
+  }
+};
+
+const setInnerHtml = function (input, text) {
+  input.innerHTML = text;
 };
