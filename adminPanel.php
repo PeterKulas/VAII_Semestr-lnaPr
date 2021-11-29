@@ -21,7 +21,7 @@
 
 <body>
     <?php 
-    if (isset($_GET['action']) && $_GET['action'] == "delete") {
+    if (isset($_GET['delete'])) {
         $deletedID = $_GET['id'];
         $userStorage->deleteUser($deletedID); 
     }                      
