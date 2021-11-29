@@ -1,21 +1,26 @@
 const paragraphPass = document.getElementById("passValue");
-
+const passMsg = document.getElementById("passMsg");
 const strengthOfPassword = document.getElementById("spanPassValue");
+
+const firstName = document.getElementById("inputPass");
+const lastName = document.getElementById("inputPass");
 const password = document.getElementById("inputPass");
 const repassword = document.getElementById("inputRepass");
-const passMsg = document.getElementById("passMsg");
 
 password.addEventListener("input", function () {
-  if (password.value.length > 0) {
+  if (!checkLength(0)) {
+    paragraphPass.classList.add("hidden");
+  }
+  if (checkLength(0)) {
     paragraphPass.classList.remove("hidden");
     strengthOfPassword.innerHTML = "slabe";
     strengthOfPassword.style.color = "red";
   }
-  if (password.value.length > 7) {
+  if (checkLength(7) && validatePassword()) {
     strengthOfPassword.innerHTML = "dobre";
     strengthOfPassword.style.color = "orange";
   }
-  if (password.value.length > 9) {
+  if (checkLength(9) && validatePassword()) {
     strengthOfPassword.innerHTML = "vyborne";
     strengthOfPassword.style.color = "green";
   }
@@ -46,12 +51,27 @@ const samePasswords = function () {
   }
 };
 
-/*
-const validPassword = function () {
-  if () {
+const validatePassword = function () {
+  if (checkPwd(/\d/) && checkPwd(/[a-z]/) && checkPwd(/[A-Z]/)) {
     return true;
   } else {
     return false;
   }
-}
-*/
+};
+
+const checkLength = function (count) {
+  if (password.value.length > count) {
+    return true;
+  } else {
+    return false;
+  }
+};
+
+const checkPwd = function (regex) {
+  let pwd = password.value;
+  if (pwd.search(regex) == -1) {
+    return false;
+  } else {
+    return true;
+  }
+};

@@ -81,8 +81,8 @@
                                     <path fill-rule="evenodd"
                                         d="M13.5 5a.5.5 0 0 1 .5.5V7h1.5a.5.5 0 0 1 0 1H14v1.5a.5.5 0 0 1-1 0V8h-1.5a.5.5 0 0 1 0-1H13V5.5a.5.5 0 0 1 .5-.5z" />
                                 </svg></span>
-                            <input type="text" class="form-control" name="firstname" placeholder="Meno" required
-                                name="firstname">
+                            <input id="firstName" type="text" class="form-control" name="firstname" placeholder="Meno"
+                                required name="firstname">
                         </div>
                         <div class="input-group mb-3">
                             <span class="input-group-text bg-primary"><svg xmlns="http://www.w3.org/2000/svg" width="16"
@@ -92,8 +92,8 @@
                                     <path fill-rule="evenodd"
                                         d="M13.5 5a.5.5 0 0 1 .5.5V7h1.5a.5.5 0 0 1 0 1H14v1.5a.5.5 0 0 1-1 0V8h-1.5a.5.5 0 0 1 0-1H13V5.5a.5.5 0 0 1 .5-.5z" />
                                 </svg></i></span>
-                            <input type="text" class="form-control" name="lastname" placeholder="Priezvisko" required
-                                name="lastname">
+                            <input id="lastname" type="text" class="form-control" name="lastname"
+                                placeholder="Priezvisko" required name="lastname">
                         </div>
                         <div class="input-group mb-3">
                             <span class="input-group-text bg-primary"><svg xmlns="http://www.w3.org/2000/svg" width="16"
