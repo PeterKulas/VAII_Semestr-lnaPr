@@ -3,7 +3,12 @@
 }
 
 #passValue {
-  font-weight: bold;
+  /* font-weight: bold; */
+}
+
+#passMsg {
+  color: #696969;
+  font-size: 15px;
 }
 
 .hidden {

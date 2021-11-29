@@ -107,13 +107,15 @@
                         <p id="passValue" class="hidden">Sila hesla: <span id="spanPassValue">Slabe</span> </p>
                         <div class="input-group mb-3">
                             <span class="input-group-text bg-primary"><svg xmlns="http://www.w3.org/2000/svg" width="16"
-                                    height="16" fill="currentColor" class="bi bi-key-fill" viewBox="0 0 16 16">
+                                    height="16" fill="currentColor" id="rpicon" class="bi bi-key-fill"
+                                    viewBox="0 0 16 16">
                                     <path
                                         d="M3.5 11.5a3.5 3.5 0 1 1 3.163-5H14L15.5 8 14 9.5l-1-1-1 1-1-1-1 1-1-1-1 1H6.663a3.5 3.5 0 0 1-3.163 2zM2.5 9a1 1 0 1 0 0-2 1 1 0 0 0 0 2z" />
                                 </svg></span>
-                            <input type="password" class="form-control" name="repassword" placeholder="Zopakuj heslo"
-                                required name="repassword">
+                            <input id="inputRepass" type="password" class="form-control" name="repassword"
+                                placeholder="Zopakuj heslo" required name="repassword">
                         </div>
+                        <p id="passMsg" class="hidden">Hesla sa nezhoduju!</p>
                         <div class="input-group mb-3">
                             <span class="input-group-text bg-primary"><svg xmlns="http://www.w3.org/2000/svg" width="16"
                                     height="16" fill="currentColor" class="bi bi-envelope-fill" viewBox="0 0 16 16">
