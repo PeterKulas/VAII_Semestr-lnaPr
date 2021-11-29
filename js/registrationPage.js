@@ -1,11 +1,21 @@
 const paragraphPass = document.getElementById("passValue");
 const passMsg = document.getElementById("passMsg");
 const strengthOfPassword = document.getElementById("spanPassValue");
+const firstnameValidation = document.getElementById("firstnameValidation");
+const lastnameValidation = document.getElementById("lastnameValidation");
 
-const firstName = document.getElementById("inputPass");
-const lastName = document.getElementById("inputPass");
+const inputFirstName = document.getElementById("inputFirstname");
+const inputLastName = document.getElementById("inputLastname");
 const password = document.getElementById("inputPass");
 const repassword = document.getElementById("inputRepass");
+
+inputFirstName.addEventListener("input", function () {
+  validateName(inputFirstName, firstnameValidation);
+});
+
+inputLastName.addEventListener("input", function () {
+  validateName(inputLastName, lastnameValidation);
+});
 
 password.addEventListener("input", function () {
   if (!checkLength(0)) {
@@ -73,5 +83,42 @@ const checkPwd = function (regex) {
     return false;
   } else {
     return true;
+  }
+};
+
+const validateName = function (input, validation) {
+  let name = input.value;
+
+  if (checkUnwantedChars(name) && checkFirstBigLetter(name)) {
+    setInnerHtml(validation, " ");
+  } else if (!checkUnwantedChars(name)) {
+    setInnerHtml(validation, "Nesmie obsahovat cisla ani specialne znaky");
+  } else if (!checkFirstBigLetter(name)) {
+    setInnerHtml(validation, "1. znak musi byt veľké písmeno.");
+  }
+  if (name.length == 0) {
+    setInnerHtml(validation, " ");
+  }
+};
+
+const setInnerHtml = function (input, text) {
+  input.innerHTML = text;
+};
+
+const checkFirstBigLetter = function (input) {
+  let regex = /^[A-Z]/;
+  if (input.search(regex) == -1) {
+    return false;
+  } else {
+    return true;
+  }
+};
+
+const checkUnwantedChars = function (input) {
+  let regex = /[-0-9!*@#$%^.,<>/_?()&;]/; //hlada toto
+  if (input.search(regex) == -1) {
+    return true;
+  } else {
+    return false;
   }
 };

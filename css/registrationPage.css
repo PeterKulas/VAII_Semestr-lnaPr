@@ -6,7 +6,9 @@
   /* font-weight: bold; */
 }
 
-#passMsg {
+#passMsg,
+#firstnameValidation,
+#lastnameValidation {
   color: #696969;
   font-size: 15px;
 }
