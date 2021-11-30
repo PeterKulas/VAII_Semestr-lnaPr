@@ -22,6 +22,10 @@ class RegisterController extends Register {
             header("location: ../registrationPage.php?error=emptyInput");
             exit();
         }
+        if($this->invalidName() == true) {
+            header("location: ../registrationPage.php?error=invalidName");
+            exit();
+        }
         if($this->samePasswords() == true) {
             header("location: ../registrationPage.php?error=samePasswords");
             exit();
@@ -97,5 +101,11 @@ class RegisterController extends Register {
         return $result;
     }
 
-    
+    private function invalidName() {
+        $result = false;
+        if(preg_match('~[0-9]~', $this->password)) {
+            $result = true;
+        }
+        return $result;
+    }
 }

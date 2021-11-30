@@ -56,14 +56,16 @@
                     <label for="country">ID:</label>
                     <input type="text" id="ID" name="ID" value="<?php echo $id ?>" readonly><br>
                     <label for="Firstname">Meno:</label>
-                    <input type="text" id="Firstname" name="Firstname" value="<?php echo $firstName ?>">
+                    <input id="inputEditFirstName" type="text" id="Firstname" name="Firstname"
+                        value="<?php echo $firstName ?>">
                     <label for="Lastname">Priezvisko:</label>
-                    <input type="text" id="Lastname" name="Lastname" value="<?php echo $lastName ?>">
+                    <input id="inputEditLastName" type="text" id="Lastname" name="Lastname"
+                        value="<?php echo $lastName ?>">
                     <label for=" Email">Email:</label>
-                    <input type="email" id="Email" name="Email" value="<?php echo $email ?>">
-                    <button class=" btn btn-primary" type="submit">
-                        Editovat</button>
+                    <input id="inputEditEmail" type="email" id="Email" name="Email" value="<?php echo $email ?>">
+                    <button class=" btn btn-primary" type="submit"> Editovat</button>
                 </form>
+                <p id="EditValidation"></p>
                 <?php   
              
             } ?>
@@ -102,12 +104,13 @@
                             </td>
 
                         </tr>
-                        <?php } //classes/user.classes.php?>
+                        <?php } ?>
                     </tbody>
                 </table>
             </div>
         </div>
     </div>
+    <script src="js/registrationPage.js"></script>
     <script src="js/adminPanel.js"></script>
 </body>
 

@@ -47,6 +47,8 @@
                 break;
             case "emailExist":
                 echo "Už existuje účet s touto emailovou adresou!";
+            case "invalidName":
+                echo "Meno ani priezvisko nesmie obsahovat cisla ani znaky!";
                 break;   
         }?>
                 </div>

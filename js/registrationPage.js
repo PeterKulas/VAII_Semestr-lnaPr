@@ -56,6 +56,7 @@ repassword.addEventListener("input", function () {
 });
 
 inputEmail.addEventListener("input", function () {
+  console.log("mail");
   if (validateEmail(inputEmail)) {
     setInnerHtml(emailMsg, "Spravny format emailu");
     inputEmail.style.border = "5px solid #90EE90";
@@ -70,8 +71,26 @@ inputEmail.addEventListener("input", function () {
   }
 });
 
-/*----------------------------------------------------------------------- */
+/*---------------Update formular----------------*/
+/*
+const inputEditFirstName = document.getElementById("inputEditFirstName");
+const inputEditLastName = document.getElementById("inputEditLastName");
+const inputEditEmail = document.getElementById("inputEditEmail");
 
+const formEditValidation = document.getElementById("EditValidation");
+
+console.log(inputEditFirstName);
+
+inputEditFirstName.addEventListener("input", function () {
+  validateName(inputEditFirstName, formEditValidation);
+});
+
+inputEditLastName.addEventListener("input", function () {
+  validateName(inputEditLastName, formEditValidation);
+});
+*/
+
+/*----------------------------------------------------------------------- */
 const samePasswords = function () {
   if (password.value === repassword.value) {
     return true;
@@ -107,7 +126,7 @@ const checkPwd = function (regex) {
 
 const validateName = function (input, validation) {
   let name = input.value;
-
+  console.log("hello");
   if (checkUnwantedChars(name) && checkFirstBigLetter(name)) {
     setInnerHtml(validation, " ");
   } else if (!checkUnwantedChars(name)) {
