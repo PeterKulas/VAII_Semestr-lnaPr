@@ -103,9 +103,18 @@ class RegisterController extends Register {
 
     private function invalidName() {
         $result = false;
-        if(preg_match('~[0-9]~', $this->password)) {
-            $result = true;
-        }
-        return $result;
+
+        if(preg_match('~[0-9]~', $this->firstname) || preg_match("/[\[^\'£$%^&*()}{@:\'#~?><>,;@\|\\=_+\-¬\`\]]/",
+    $this->firstname)) {
+    $result = true;
     }
-}
+
+    if(preg_match('~[0-9]~', $this->lastname) || preg_match("/[\[^\'£$%^&*()}{@:\'#~?><>,;@\|\\=\-_+¬\`\]]/",
+        $this->lastname)) {
+        $result = true;
+        }
+
+        return $result;
+        }
+
+        }
